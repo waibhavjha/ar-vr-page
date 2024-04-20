@@ -217,42 +217,66 @@ body {
     font-size: 14px;
   }
 
-  .footer {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-  }
   
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .footer-section {
-    flex: 1;
-  }
-  
-  .footer-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-bottom {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
 
- 
+
+
+  /* Add responsive styles for footer in style.css */
+
+.footer {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-section {
+  flex: 1; /* Equal width for each section */
+  margin-right: 20px; /* Add spacing between sections */
+  margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.footer-section h3 {
+  color: #333; /* Dark text color for headings */
+}
+
+.footer-section p,
+.footer-section ul {
+  color: #666; /* Medium text color for content */
+}
+
+.footer-section ul {
+  padding-left: 0; /* Remove default list padding */
+}
+
+.footer-section ul li {
+  list-style-type: none; /* Remove list bullets */
+}
+
+.footer-bottom {
+  text-align: center; /* Center-align bottom text */
+  margin-top: 20px; /* Add spacing at the top */
+  color: #999; /* Light text color for bottom text */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .footer-section {
+    flex-basis: 100%; /* Full width for each section on smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
 
 
 .navbar {
@@ -372,3 +396,6 @@ body {
     margin-left: 5px; /* Reduce margin for smaller screens */
   }
 }
+
+
+
