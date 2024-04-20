@@ -404,7 +404,7 @@ body {
 
 
 
-/* Add styles for SimilarProperties component in style.css */
+
 
 .similar-properties {
   padding: 20px;
@@ -447,54 +447,3 @@ body {
 }
 
 
-/* Add responsive styles for Property component in style.css */
-
-.property {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.property-image {
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.property-details {
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.property-name {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.property-type {
-  font-style: italic;
-  color: #666;
-}
-
-.property-price {
-  font-weight: bold;
-}
-
-/* Responsive styles */
-@media screen and (min-width: 768px) {
-  .property {
-    flex-direction: row;
-  }
-
-  .property-image {
-    width: 50%;
-    border-radius: 5px 0 0 5px;
-  }
-
-  .property-details {
-    width: 50%;
-    border-radius: 0 5px 5px 0;
-  }
-}
