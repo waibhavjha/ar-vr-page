@@ -288,61 +288,85 @@ body {
 }
 
 
-/* Adjust layout for smaller screens */
-@media screen and (max-width: 768px) {
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer-section {
-    margin-bottom: 20px;
-  }
+/* Add responsive styles for thin navbar in style.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Adjust padding as needed */
 }
 
-/* Responsive styling for footer sections */
-@media screen and (max-width: 600px) {
-  .footer-section {
-    text-align: center;
-  }
+.navbar__logo img {
+  max-height: 40px; /* Adjust logo height as needed */
 }
 
-/* Responsive styling for footer links */
-@media screen and (max-width: 480px) {
-  .footer-section ul {
-    padding-left: 0;
-  }
-  .footer-section ul li {
-    list-style-type: none;
-    margin-bottom: 10px;
-  }
+.navbar__links,
+.navbar__buttons {
+  display: flex;
+  align-items: center;
 }
 
-/* Responsive styling for footer bottom */
-@media screen and (max-width: 768px) {
-  .footer-bottom {
-    text-align: center;
-  }
+/* Adjust margins for buttons */
+.navbar__buttons button {
+  margin-left: 10px;
 }
-      
+
 /* Adjust layout for smaller screens */
 @media screen and (max-width: 768px) {
   .navbar {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar__logo img {
+    max-height: 30px; /* Reduce logo height for smaller screens */
+  }
+
+  .navbar__links,
+  .navbar__buttons {
+    display: none; /* Hide links and buttons by default */
+  }
+  
+  .navbar__buttons {
+    display: flex;
+  }
+}
+
+/* Show links and buttons on toggle */
+@media screen and (max-width: 768px) {
+  .navbar__toggle:checked + .navbar__links,
+  .navbar__toggle:checked + .navbar__buttons {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Add background color for visibility */
+    border-top: 1px solid #ddd; /* Add border for separation */
+    padding: 10px;
   }
-  .navbar__logo {
-    margin-bottom: 20px;
-  }
-  .navbar__location,
-  .navbar__button {
+
+  .navbar__toggle:checked + .navbar__links a,
+  .navbar__toggle:checked + .navbar__buttons button {
     margin: 10px 0;
   }
 }
 
-/* Adjust margins for smaller screens */
-@media screen and (max-width: 600px) {
-  .navbar__button {
-    margin: 5px 0;
+/* Hide checkbox */
+.navbar__toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.navbar__menu-icon {
+  display: none; /* Hide by default */
+}
+
+/* Show hamburger icon for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar__menu-icon {
+    display: block;
+    cursor: pointer;
   }
 }
-  
