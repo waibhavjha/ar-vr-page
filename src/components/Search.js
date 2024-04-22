@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import '../style.css'; // Import your CSS file for styling
+import '../style.css'; // Import the CSS file for Search component styling
 
 const Search = () => {
-    // eslint-disable-next-line
-    const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [query, setQuery] = useState('');
-  const [category, setCategory] = useState('');
 
   const handleSearch = () => {
     // Here you can implement your search logic
@@ -27,15 +24,16 @@ const Search = () => {
   };
 
   return (
-  <div>
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+      <div className="search-content">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+        <select>
         <option value="">All Categories</option>
         <option value="resorts">Resorts</option>
         <option value="co-working">Co-working</option>
@@ -49,18 +47,20 @@ const Search = () => {
         <option value="school">School</option>
         <option value="hotel-rooms">Hotel rooms</option>
        </select>
-      <button onClick={handleSearch}>Search</button>
+        
+        <button onClick={handleSearch} className="search-button">Search</button>
+      </div>
+
+      <div>
+        <ul>
+          {searchResults.map(result => (
+            <li key={result.id}>
+              <strong>{result.category}</strong>: {result.name}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-    <div>
-    <ul>
-      {searchResults.map(result => (
-        <li key={result.id}>
-          <strong>{result.category}</strong>: {result.name}
-        </li>
-      ))}
-    </ul>
-  </div>
-  </div>
   );
 };
 
