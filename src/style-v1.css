@@ -1,11 +1,11 @@
-body {
    /*background-color: #000;
-   color: #fff; /* Set text color to white for better contrast */
   }
-  .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+    /*color: #fff; /* Set text color to white for better contrast */
+    /*background-color: #000;*/
+.body {
     background-color: #333;
     padding: 1rem;
   }
