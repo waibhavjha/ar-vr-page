@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Homepage from './components/Homepage';
+import HPage from './components/HPage';
 //import HomePage2 from './components/HomePage2';
 import Search from './components/Search';
 import LuxuryApartment from './components/LuxuryApartment';
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Homepage />
+      <HPage />
       <Search />
       <LuxuryApartment />
       <Page />
