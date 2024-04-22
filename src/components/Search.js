@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import '../style.css'; // Import the CSS file for Search component styling
+import '../style.css'; // Import your CSS file for styling
 
 const Search = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('');
 
   const handleSearch = () => {
     // Here you can implement your search logic
@@ -24,28 +26,40 @@ const Search = () => {
   };
 
   return (
+  <div>
     <div className="search-container">
-      <div className="search-content">
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-input"
-        />
-        <button onClick={handleSearch} className="search-button">Search</button>
-      </div>
-
-      <div>
-        <ul>
-          {searchResults.map(result => (
-            <li key={result.id}>
-              <strong>{result.category}</strong>: {result.name}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="">All Categories</option>
+        <option value="resorts">Resorts</option>
+        <option value="co-working">Co-working</option>
+        <option value="co-living">Co-Living</option>
+        <option value="real-estate">Real-Estate</option>
+        <option value="gym">Gym</option>
+        <option value="restaurants">Restaurants</option>
+        <option value="clinics">Clinics</option>
+        <option value="pre-school">Pre-school</option>
+        <option value="college">College</option>
+        <option value="school">School</option>
+        <option value="hotel-rooms">Hotel rooms</option>
+       </select>
+      <button onClick={handleSearch}>Search</button>
     </div>
+    <div>
+    <ul>
+      {searchResults.map(result => (
+        <li key={result.id}>
+          <strong>{result.category}</strong>: {result.name}
+        </li>
+      ))}
+    </ul>
+  </div>
+  </div>
   );
 };
 
