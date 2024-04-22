@@ -1,3 +1,4 @@
+// Footer.js
 import React from 'react';
 import '../style.css'; // Import CSS for styling
 
@@ -15,13 +16,13 @@ const Footer = () => {
         <div className="footer-section">
           <h3>USEFUL LINKS</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Refer & earn</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/jobs">Jobs</a></li>
+            <li><a href="/refer-earn">Refer & earn</a></li>
+            <li><a href="/terms">Terms of service</a></li>
+            <li><a href="/privacy">Privacy policy</a></li>
+            <li><a href="/contact">Contact us</a></li>
           </ul>
         </div>
         <div className="footer-section">
@@ -32,7 +33,7 @@ const Footer = () => {
             <li>Healthcare</li>
             <li>Real-estate</li>
             <li>Fitness</li>
-            <li>Eduaction</li>
+            <li>Education</li>
             <li>Automobile</li>
           </ul>
         </div>
