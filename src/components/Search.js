@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../style.css'; // Import your CSS file for styling
 
 const Search = () => {
+    // eslint-disable-next-line
     const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [query, setQuery] = useState('');
