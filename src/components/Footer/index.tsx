@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                LetzStepIn – India's avant-garde super app designed to seamlessly integrate into your daily lifestyle, property endeavors, and travel escapades. We're not just a platform; we're a commitment to user satisfaction, guaranteeing unparalleled benefits, quality, and safety.
+                LetzStepIn &ndash; India&apos;s avant-garde super app designed to seamlessly integrate into your daily lifestyle, property endeavors, and travel escapades. We&apos;re not just a platform; we&apos;re a commitment to user satisfaction, guaranteeing unparalleled benefits, quality, and safety.
                 </p>
                 <div className="flex items-center">
                   <a
